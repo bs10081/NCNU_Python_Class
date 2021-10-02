@@ -18,7 +18,7 @@ def main():
     # Output Number (Min to Max)
     a = FirstSide ** 2 + SecondSide ** 2 
     b = ThirdSide ** 2
-    # Set a, b, c variable
+    # Set a, b variable
     if (FirstSide == SecondSide == ThirdSide):
         print("No")     # Equilateral triangle
     elif (FirstSide == SecondSide or SecondSide == ThirdSide):
