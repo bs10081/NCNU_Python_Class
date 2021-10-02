@@ -1,12 +1,16 @@
-v = None
+# 學號：110213027
+# 姓名：簡齊君
+v = None    # v = None, Global function.
 
 def main():
     printPrimes(isInput())
 
 def isInput():
-    global v
-    v = int(input("Begin Number: "))
-    n = int(input("End Number: "))
+    global v    # Use Global variavle "v"
+    Begin = int(input("Begin Number: "))
+    End = int(input("End Number: "))
+    v = min(Begin, End)     # Get the min Number to fix Order problem.  
+    n = max(Begin, End)     # Get the max Number to fix Order problem.
     return n
 def printPrimes(n):     # Define a function to print primes.
     
