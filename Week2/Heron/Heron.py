@@ -1,5 +1,3 @@
-# 學號：110213027
-# 姓名：簡齊君
 def main():
     a = float(input("a: "))
     b = float(input("b: "))
