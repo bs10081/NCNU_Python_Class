@@ -1,6 +1,3 @@
-# 學號：110213027
-# 姓名：簡齊君
-
 def isInput():
     FirstSide = float(input("Please input the first side: "))
     SecondSide = float(input("Please input the second side: "))
