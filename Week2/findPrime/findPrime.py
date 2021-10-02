@@ -1,5 +1,3 @@
-# 學號：110213027
-# 姓名：簡齊君
 v = None    # v = None, Global function.
 
 def main():
