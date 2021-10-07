@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 v = None                                                # v = None, Global function.
+=======
+v = None    # v = None, Global function.
+>>>>>>> 547dbdc041905c7d27ad85023f86200ea64a21c0
 
 def main():
     printPrimes(isInput())
