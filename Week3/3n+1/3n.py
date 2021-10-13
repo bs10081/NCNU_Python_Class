@@ -23,7 +23,7 @@ def seqLen(v):
         if v % 2 == 0:
             v = v // 2
         else:
-            v = v*3 + 1
+            v = v * 3 + 1
         length = length + 1
     return length
 main()
