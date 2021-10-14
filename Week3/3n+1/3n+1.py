@@ -1,29 +1,31 @@
 def main():
-    try:
+    try: 
         while True:
-            start, end = map(int, input().split())
-            if start > end:
-                start,end = end,start
-            findSol(start, end)
-    except EOFError:
+            begin, end = map(int, input().split())  #input 2 number in one line.
+            if begin > end:
+                end, begin = begin, end
+            findSol(begin, end)     # use findSol to print anser.
+    except EOFError:                # if error then pass. :)
         pass
-# find the maximun seqence length betwee(start, end)
-def findSol(start, end):
-    maxLen = seqLen(start)
-    v = start + 1
-    while v <= end:
-        if seqLen(v) > maxLen:
-            maxLen = seqLen(v)
-        v = v + 1
-    print(start, end, maxLen)
-# calculate the seqence length of seed v
-def seqLen(v):
+
+def findSol(begin, end):
+    maxLen = seqLen(begin)      # set a container for cycle.
+    n = begin + 1
+    while n <= end: 
+        if seqLen(n) > maxLen:
+            maxLen = seqLen(n)  # put seqLen(n) to maxLen.
+        n = n + 1
+    print(begin, end, maxLen) 
+
+
+def seqLen(n):
     length = 1
-    while v != 1:
-        if v % 2 == 0:
-            v = v // 2
-        else:
-            v = v*3 + 1
+    while n != 1:       # if n = 1 then STOP
+        if n % 2 == 0:  # else n ←− n/2
+            n = n // 2
+        else:           # if n is odd then n ←− 3n + 1
+            n = 3 * n + 1   
         length = length + 1
     return length
+
 main()
