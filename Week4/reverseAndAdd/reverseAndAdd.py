@@ -1,11 +1,11 @@
 def main():
     # input the number
-    numArray = int(input("Enter the total number of the number array: "))
+    numArray = int(input())
     # Set a variable to save the reversed times
     numArrayCount = 0
     while numArrayCount < numArray:
         # input the number
-        Number = int(input("Enter the number: "))
+        Number = int(input())
         # put the anser to the variable.
         addCount, revs_number = AddReverseNum(Number)
         print(addCount, revs_number)
