@@ -21,7 +21,8 @@ def findSecondMin(data):
         if temNum < minNum:
             secNum = minNum
             minNum = temNum
-
+        elif temNum == minNum:
+            secNum = temNum
         elif temNum > minNum and temNum < secNum:
             secNum = temNum
             
