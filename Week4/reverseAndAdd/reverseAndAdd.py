@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 def main():
     # input the number
     numArray = int(input())
@@ -11,25 +10,6 @@ def main():
         addCount, revs_number = AddReverseNum(Number)
         print(addCount, revs_number)
         numArrayCount += 1
-=======
-# def main():
-#     # input the number
-#     inputNum = input()
-#     Num = len(inputNum)-1
-#     if inputNum != 0:
-#         for i in range(Num, -1, -1):
-#             num = (inputNum[i],)
-#     else:
-#         inputNum = inputNum 
-
-#     print(num)
-# main()
-
-# def addReverseNumber(revs_number, realNumber):
-#     reverseNum()
-#     addNumber = revs_number + realNumber
-#     print("Anser: {}".format(addNumber))
->>>>>>> beta
 
 def reverseNum(Number):
     revs_number = 0
@@ -41,22 +21,6 @@ def reverseNum(Number):
         Number = Number // 10
     return revs_number
 
-<<<<<<< HEAD
-=======
-def main():
-    # input the number
-    numArray = int(input("Enter the total number of the number array: "))
-    # Set a variable to save the reversed times
-    numArrayCount = 0
-    while numArrayCount < numArray:
-        # input the number
-        Number = int(input("Enter the number: "))
-        # put the anser to the variable.
-        addCount, revs_number = AddReverseNum(Number)
-        print(addCount, revs_number)
-        numArrayCount += 1
-
->>>>>>> beta
 def AddReverseNum(Number):
     # Avoid palindrome from appearing at the beginning, so do a calculation first.
     Number = Number + reverseNum(Number)
