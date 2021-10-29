@@ -13,13 +13,14 @@ def main():
 def findFriends(me, Friends):
     # print frist friend in the group
     print(me, end="")
-    firstFriends = me
+    fristFriends = me
     # When I have a friend, then pritn the friend.
     while Friends[me] != -1:
 
         # When my friend is alone, then STOP
-        if  firstFriends == Friends[me] :
-            Friends[me] = -1
+        if fristFriends == Friends[me] :
+            Friends[me] = -1    
+            break
         print(" " +str(Friends[me]), end="")
         temFriends = Friends[me]
         Friends[me] = -1
