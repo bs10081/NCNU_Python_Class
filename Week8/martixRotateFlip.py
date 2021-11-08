@@ -41,7 +41,7 @@ def rotateMatrix(R, C, matrix):
 def test():
     a = [[1,2],[3,4]]
     a = flipMatrix(a)
-    print(a)
+    print(a) 
 
 def main():
     # input data
@@ -49,7 +49,6 @@ def main():
     matrix = [[int(j) for j in input().split(" ")] for i in range(R)]
     operations = [int(i) for i in input().split(" ")]
 
-    # set a list
     # if operation = 1 then flip, else then rotate
     for operation in operations[::-1]:
         if operation == 1:
