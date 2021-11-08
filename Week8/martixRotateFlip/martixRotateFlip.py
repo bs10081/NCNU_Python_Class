@@ -10,11 +10,6 @@ def rotateMatrix(R, C, matrix):
 
     return result 
 
-def test():
-    a = [[1,2],[3,4]]
-    a = flipMatrix(a)
-    print(a)
-
 def main():
     # input data
     R, C, M = [int(i) for i in input().split(" ")]
