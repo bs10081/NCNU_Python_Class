@@ -23,7 +23,7 @@ def main():
         elif operation == 0:
             matrix = rotateMatrix(len(matrix), len(matrix[0]), matrix)
         
-    # print row and cols's lenght
+    # print row and cols's length
     print(len(matrix), len(matrix[0]))
 
     # print matrix and format
