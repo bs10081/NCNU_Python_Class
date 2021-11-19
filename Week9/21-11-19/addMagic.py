@@ -1,6 +1,3 @@
-# 學號：110213027
-# 姓名：簡齊君
-
 # 1??2 ?442 7?44
 # pos: the position I have to fill
 # s: string of a, b, c
