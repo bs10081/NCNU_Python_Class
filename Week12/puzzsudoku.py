@@ -18,7 +18,6 @@
 # - - -
 # - - -
 
-
 def findSol(color, puz):
     r = [[True for i in range(9)] for j in range(9)]
     c = [[True for i in range(9)] for j in range(9)]
@@ -36,10 +35,10 @@ def findSol(color, puz):
 # b: list of 9 booleans, represent which number can be filled in this block.
 # p: which position I am responsible to fill
 def fillPuzzle(puz, r, c, b, p, color):
-    # times = 9
     if p == 81:
         z=0
         for r in range(9):
+            # Set answer to str, because later will change list to str, then format.
             ans=str()
             for i in range(9):
                 ans+=str(puz[z])
@@ -47,14 +46,8 @@ def fillPuzzle(puz, r, c, b, p, color):
             print(ans,end='')
             print()
         print()
-        # while times==0:
-        #     ans=[]
-        #     for i in range(9):
-        #         ans.append(puz[z])
-        #         z+=1
-        #     times-=1
-        #     print(*ans)
         return
+
     # already filled
     if puz[p] != 0:
         fillPuzzle(puz, r, c, b, p+1, color)
