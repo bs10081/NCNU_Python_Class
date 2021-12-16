@@ -24,7 +24,7 @@ def seDiff(a, b):
     return result
 
 def main():
-    comb(['A', 'B', 'C', 'D'], 2, [])
+    perm(['A', 'B', 'C', 'D'], 2, [])
 
 if __name__ == "__main__":
     main()
