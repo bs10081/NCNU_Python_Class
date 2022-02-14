@@ -1,5 +1,6 @@
 # 學號：110213027
 # 姓名：簡齊君
+
 # ```info
 # INPUT: give 9 lines, each has 9 digits for 0 to 9
 # 0 represents the position is free to fill, others are fixed digits
@@ -44,6 +45,7 @@ def fillPuzzle(puz, r, c, b, p, color):
                 ans+=str(puz[z])
                 z+=1
             print(ans,end='')
+            # Line-up
             print()
         print()
         return
