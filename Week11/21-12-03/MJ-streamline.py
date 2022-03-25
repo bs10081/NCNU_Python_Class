@@ -1,2 +1,0 @@
-def canHu(card, c=0, needMJ=True):
-    return c==9 or card[c]==0 and canHu(card, c+1, needMJ) or card[c]>=3 and canHu([card[i]-3 if c==i else card[i] for i in range(9)], c, needMJ) or needMJ and card[c]>=2 and canHu([card[i]-2 if c==i else card[i] for i in range(9)], c, False) , c<7 and card[c]>1 and card[c+1]>=1 and card[c+2]>=1 and canHu([card[i]-1 if i>=c and i<=c+2 else ])
