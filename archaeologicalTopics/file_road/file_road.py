@@ -4,8 +4,8 @@
 def Q1():
     # 匯入檔案 file_road.csv
     data = []
-    with open("file_road.csv", "r", encoding="UTF-8-sig") as f:
-        for line in f:
+    with open("file_road.csv", "r", encoding="UTF-8-sig") as file:
+        for line in file:
             data.append(line.split())
     print("全國共有", len(data), "條路或街")
 
@@ -99,7 +99,7 @@ def Q6():
 def main():
     # 輸入要輸出的題目
     while True:
-        set = input("請輸入要輸出的題目(1~6, 輸入q退出)：")
+        set = input("請輸入要輸出的題目(1 ~ 6, 輸入 q 退出)：")
         # 判斷輸入的題目
         if set == "1":
             Q1()
@@ -117,7 +117,7 @@ def main():
             print("拜拜👋")
             quit()
         else:
-            print("輸入錯誤, 只能輸入 1~6 或 q 哦")
+            print("輸入錯誤, 只能輸入 1 ~ 6 或 q 哦")
 
 
 if __name__ == "__main__":
