@@ -6,10 +6,13 @@ def Q1():
         for line in file:
             data.append(line.split(","))
         count = 0
+        # 判斷路名(i[2])中 "最後"一個字是否為「路」或「街」
         for i in data:
-            if "街" in i[2] or "路" in i[2]:
+            dataTmp = [one for one in i[2]]
+            if "路" in dataTmp[-2] or "街" in dataTmp[-2]:
                 count += 1
     print("全國共有", count, "條路或街")
+
 
 # 請問南投縣與彰化縣共有多少條路或街?
 
@@ -24,9 +27,12 @@ def Q2():
     count = 0
     for i in data:
         if i[0] == "南投縣" or i[0] == "彰化縣":
-            if "街" in i[2] or "路" in i[2]:
+            # 判斷路名(i[2])中 "最後"一個字是否為「路」或「街」
+            dataTmp = [one for one in i[2]]
+            if "路" in dataTmp[-2] or "街" in dataTmp[-2]:
                 count += 1
     print("南投縣與彰化縣共有", count, "條路或街")
+
 
 # 請用split函數將每列資料分成三部分，請列出路名中包含「中山」或者「台灣」兩個字的路或街?
 
@@ -39,8 +45,10 @@ def Q3():
             data.append(line.split(","))
     # 列出路名中包含「中山」或者「台灣」兩個字的路或街
     for i in data:
-        if "中山" in i[2] or "台灣" in i[2]:
-            if "街" in i[2] or "路" in i[2]:
+        if "中山" in i[2] or "臺灣" in i[2]:
+            # 判斷路名(i[2])中 "最後"一個字是否為「路」或「街」
+            dataTmp = [one for one in i[2]]
+            if "路" in dataTmp[-2] or "街" in dataTmp[-2]:
                 print(*i)
 
 
@@ -57,7 +65,9 @@ def Q4():
     count = 0
     for i in data:
         if "龍富" in i[2]:
-            if "街" in i[2] or "路" in i[2]:
+            # 判斷路名(i[2])中 "最後"一個字是否為「路」或「街」
+            dataTmp = [one for one in i[2]]
+            if "路" in dataTmp[-2] or "街" in dataTmp[-2]:
                 count += 1
     print("路名中包含「龍富」兩個字的路或街共有", count, "條")
 
