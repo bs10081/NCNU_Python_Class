@@ -85,12 +85,15 @@ def Q6():
             data.append(line.split(","))
     # 計算全國的「中山區」數量
     count = 0
+    # 建立一個空的list
+    dataTmp = []
     for i in data:
         # 判斷是否有「中山區」等字眼
         if "中山區" in i[1]:
             # 排除重複的「中山區」
-            if i[0] not in data:
+            if i[0] not in dataTmp:
                 count += 1
+                dataTmp.append(i[0])
     print("全國共有", count, "個「中山區」")
 
 # 選擇要輸出的題目
