@@ -128,9 +128,6 @@ def Q5():
     b.close()
 
 
-def Q6():
-
-
 def main():
     while True:
         print("請輸入要執行的題號(1~5)，或輸入0結束程式")
