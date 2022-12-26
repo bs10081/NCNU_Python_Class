@@ -8,33 +8,43 @@ def main():
     # 準備寫入b檔案的紀錄
     new_row = ""
     income = []
+    rows = {}
+    data = {}
     # 讀取a檔案的紀錄, 從第二行開始讀取
-    for line in a.readlines()[1:]:
+    for line in a:
         # 移除字串尾巴的\n新行符號
         rows = line.replace("\n", "")
+        # 刪除第一行的欄位名稱
+        if "ID,Income" in rows:
+            continue
         # 把字串切割成不同欄位
         cols = rows.split(',')
-        # 將 ID 與 Income 做成字典
-        rows = {"ID": cols[0], "Income": cols[1]}
-        # 將家戶收入(Income)資料存入income串列
-        income.append(int(rows["Income"]))
-    # 泡沫排序法
-    for i in range(len(income) - 1):
-        for j in range(len(income) - 1 - i):
-            if income[j] < income[j + 1]:
-                income[j], income[j + 1] = income[j + 1], income[j]
-    # 根據rows字典,匹配 家戶編號(ID)與家戶收入(income)資料, 並寫入b檔案
+        # 把家戶收入存入income串列
+        income.append(int(cols[1]))
+        # 把所有數據存到 data 字典中
+        data[cols[0]] = cols[1]
+    # 氣泡排序法
+    bubbleSort(income)
+    # 把氣泡排序法排序後的家戶收入寫入b檔案
     for i in range(len(income)):
-        for line in a.readlines()[1:]:
-            rows = line.replace("\n", "")
-            cols = rows.split(',')
-            rows = {"ID": cols[0], "Income": cols[1]}
-            if income[i] == int(rows["Income"]):
-                new_row = rows["ID"] + "," + rows["Income"] + "\n"
-    b.write(new_row)
+        # 家戶編號 匹配 家戶收入
+        for key, value in data.items():
+            if str(income[i]) == value:
+                new_row = key + "," + value + "\n"
+                b.write(new_row)
 
     a.close()
     b.close()
+
+# 氣泡排序法
+
+
+def bubbleSort(income):
+    for i in range(len(income)):
+        for j in range(len(income) - 1):
+            if income[j] < income[j + 1]:
+                income[j], income[j + 1] = income[j + 1], income[j]
+    return income
 
 
 if __name__ == "__main__":
